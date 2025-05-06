@@ -1,0 +1,204 @@
+# https://starship.rs/
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+$os\
+$sudo\
+$directory\
+$shell\
+$git_branch\
+$git_status\
+$git_state\
+$git_commit\
+$git_metrics\
+$jobs\
+$package\
+$localip\
+$fill\
+$java\
+$kotlin\
+$scala\
+$swift\
+$c\
+$rust\
+$golang\
+$elixir\
+$elm\
+$nodejs\
+$php\
+$haskell\
+$julia\
+$nim\
+$gradle\
+$cmake\
+$docker_context\
+$aws\
+$gcloud\
+$azure\
+$line_break\
+$character\
+"""
+
+right_format="""
+$cmd_duration\
+$time\
+"""
+
+[os]
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+format = "[ $symbol]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[directory]
+format = "[ $path]($style)"
+
+[package]
+symbol = "◨"
+format = '[ $symbol ($version)]($style)'
+
+[memory_usage]
+disabled = false
+
+[git_branch]
+symbol = ""
+format = "[ $symbol $branch(:$remote_branch)]($style) "
+
+[git_status]
+disabled = false
+
+[git_commit]
+tag_disabled = false
+
+[git_metrics]
+disabled = false
+
+[aws]
+symbol = "aws "
+
+[gcloud]
+symbol = "gcp "
+
+[azure]
+symbol = "azure "
+
+[terraform]
+symbol = "terraform "
+
+[docker_context]
+symbol = "docker"
+only_with_files = false
+disabled = false
+
+[gradle]
+symbol = "gradle"
+format = '[ $symbol ($version) ]($style)'
+
+[cmake]
+symbol = "cmake"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = "java"
+format = '[ $symbol ($version) ]($style)'
+
+[kotlin]
+symbol = "kotlin"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = "scala"
+format = '[ $symbol ($version) ]($style)'
+
+[swift]
+symbol = "swift"
+format = '[ $symbol ($version) ]($style)'
+
+[c]
+symbol = "C"
+format = '[ $symbol ($version) ]($style)'
+
+[zig]
+symbol = "zig"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = "rust"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = "golang"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = "elixir"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = "elm"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = "nodejs"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = "python"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = "php"
+format = '[ $symbol ($version) ]($style)'
+
+[ruby]
+symbol = "ruby"
+format = '[ $symbol ($version) ]($style)'
+
+[perl]
+symbol = "perl"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = "haskell"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = "julia"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "nim"
+format = '[ $symbol ($version) ]($style)'
+
+[cmd_duration]
+disabled = false
+format = '[ ▶ $duration ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[  $time ]($style)'
