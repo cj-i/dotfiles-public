@@ -105,7 +105,7 @@ stow_dotfiles() {
   ask_to_continue_with_specified_process "Do you want to stow the dotfiles?"
 
   readonly string="Stowing dotfiles"
-  if stow -t ~ dots; then
+  if stow dots; then
     echo "$string (success)"
   else
     echo "$string (failed)"
