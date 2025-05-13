@@ -1,4 +1,7 @@
 # How to install these configs
 
-### Execute this command
+### To create symlinks
 ```stow dots```
+
+### To delete symlinks
+```stow --delete dots```
