@@ -1,4 +1,4 @@
 # How to install these configs
 
-## Execute this command
+### Execute this command
 ```stow dots```
